@@ -1,6 +1,7 @@
 Django==2.0.2
 dj-database-url==0.4.2
 environs==2.1.0
+psycopg2==2.7.4
 pytz==2018.3
 waitress==1.1.0
 whitenoise==3.3.1
