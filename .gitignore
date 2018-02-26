@@ -65,6 +65,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.db
 
 # Rope project settings
 .ropeproject
