@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-import pytest
 from django.utils.module_loading import import_string
 
 from umami.wsgi import application
