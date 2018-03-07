@@ -62,11 +62,20 @@ USE_TZ = True
 # Development
 #
 DEBUG = env.bool('DEBUG', False)
+LOCALDEV = env.bool('LOCALDEV', False)
 
 #
 # Security
 #
 INTERNAL_IPS = env.list('INTERNAL_IPS', [])
+if not LOCALDEV:
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = env.int('SECURE_HSTS_SECONDS', 31536000)
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool('SECURE_HSTS_INCLUDE_SUBDOMAINS', True)
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
 
 #
 # Routing
