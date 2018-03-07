@@ -3,7 +3,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from umami import views
+
 urlpatterns = [
+    path('', views.HomePageView.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
 ]
