@@ -30,65 +30,67 @@ This describes how to set up a local development environment for working on UMAM
 
 1.  Clone the repository.
 
-    > git clone git@github.com:AIE-Guild/umami.git
+    git clone git@github.com:AIE-Guild/umami.git
 
 
 1.  Set up a virtual environment.
 
   * Linux
 
-      > cd umami
-      > virtualenv -p python3.6 env
-      > source env/bin/activate
+    cd umami
+    virtualenv -p python3.6 env
+    source env/bin/activate
 
   * Windows
 
-      > cd umami
-      > virtualenv -p python3.6 env
-      > env\Scripts\activate
+    cd umami
+    virtualenv -p python3.6 env
+    env\Scripts\activate
 
   * Anaconda
 
-      > cd umami
-      > conda create -p .\env python=3.6
-      > activate .\env
+    cd umami
+    conda create -p .\env python=3.6
+    activate .\env
 
 1.  Install the dependencies.
 
-    > pip install -r requirements-dev.txt
+    pip install -r requirements-dev.txt
 
 
 1.  Test the installation.
 
-    > python manage.py check
+    python manage.py check
 
 
 1.  Create an environment file for configuration.
 
-    SECRET_KEY=...
-    DEBUG=true
-    INTERNAL_IPS=127.0.0.1
-    ALLOWED_HOSTS=*
-    DJANGO_LOG_LEVEL=DEBUG
-    OAUTHLIB_INSECURE_TRANSPORT=true
-    EMAIL_HOST=mail.example.net
-    EMAIL_PORT=587
-    EMAIL_HOST_USER=someuser
-    EMAIL_HOST_PASSWORD=p@ssw0rd
-    EMAIL_USE_TLS=true
-    SERVER_EMAIL=someuser@example.net
-    DEFAULT_FROM_EMAIL=someuser@example.net
-    LOCALDEV=true
+```
+SECRET_KEY=...
+DEBUG=true
+INTERNAL_IPS=127.0.0.1
+ALLOWED_HOSTS=*
+DJANGO_LOG_LEVEL=DEBUG
+OAUTHLIB_INSECURE_TRANSPORT=true
+EMAIL_HOST=mail.example.net
+EMAIL_PORT=587
+EMAIL_HOST_USER=someuser
+EMAIL_HOST_PASSWORD=p@ssw0rd
+EMAIL_USE_TLS=true
+SERVER_EMAIL=someuser@example.net
+DEFAULT_FROM_EMAIL=someuser@example.net
+LOCALDEV=true
+```
 
 
 1.  Build the database schema.
 
-    > python manage.py migrate
+    python manage.py migrate
 
 
 1.  Add a superuser.
 
-    > python manage.py createsuperuser
+    python manage.py createsuperuser
 
 
 1.  Create a [Discord app](https://discordapp.com/developers/applications/me) for OAuth2 authentication.  You will need
@@ -97,7 +99,7 @@ This describes how to set up a local development environment for working on UMAM
 
 1.  Start the local server.
 
-    > python mange.py runserver
+    python mange.py runserver
 
 
 1.  Log in with the superuser account and navigate to the [admin panel](http://127.0.0.1:8000/admin/).
