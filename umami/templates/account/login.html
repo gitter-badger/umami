@@ -1,4 +1,4 @@
-{% extends "account/base_footer.html" %}
+{% extends "account/base.html" %}
 
 {% load bootstrap4 %}
 {% load i18n %}
@@ -40,13 +40,16 @@
         <button class="btn btn-outline-success btn-block" type="submit">{% trans "Log In" %}</button>
       </div>
       <div class="col-sm">
-        <button class="btn btn-outline-secondary btn-block" type="reset">{%  trans "Cancel" %}</button>
+        <button class="btn btn-outline-secondary btn-block" type="reset">{% trans "Cancel" %}</button>
       </div>
       <div class="col-sm">
         <a class="btn btn-outline-primary btn-block" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
       </div>
     </div>
 
+    <p class="card-text text-right mt-5">
+      <a class="card-link" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    </p>
   </form>
 
 {% endblock panel_content %}
