@@ -37,13 +37,13 @@
 
     <div class="row">
       <div class="col-sm">
-        <button class="btn btn-outline-success btn-block" type="submit">Log In</button>
+        <button class="btn btn-outline-success btn-block" type="submit">{% trans "Log In" %}</button>
       </div>
       <div class="col-sm">
-        <button class="btn btn-outline-secondary btn-block" type="reset">Cancel</button>
+        <button class="btn btn-outline-secondary btn-block" type="reset">{%  trans "Cancel" %}</button>
       </div>
       <div class="col-sm">
-        <a class="btn btn-outline-primary btn-block" href="{% url 'account_signup' %}">Sign Up</a>
+        <a class="btn btn-outline-primary btn-block" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
       </div>
     </div>
 
