@@ -45,7 +45,9 @@
               <button type="button" class="btn btn-sm btn-outline-success">{% user_display user %}</button>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dAuth">
-              <a class="dropdown-item" href="{% url 'account_email' %}">{% trans "Change E-mail" %}</a>
+              <a class="dropdown-item" href="{% url 'account_email' %}">{% trans "E-mail Addresses" %}</a>
+              <a class="dropdown-item" href="{% url 'account_change_password' %}">{% trans "Change Password" %}</a>
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans "Log Out" %}</a>
             </div>
           {% else %}
