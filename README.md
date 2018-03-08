@@ -94,8 +94,8 @@ LOCALDEV=true
 
 
 1.  Create a [Discord app](https://discordapp.com/developers/applications/me) for OAuth2 authentication.  You will need
-    the *client_id* and *client_secret* credentials, and you will need to specify
-    "http://127.0.0.1:8000/accounts/discord/login/callback/" as a *redirect_uri*.
+    the **client_id** and **client_secret** credentials, and you will need to specify
+    `http://127.0.0.1:8000/accounts/discord/login/callback/` as a **redirect_uri**.
 
 1.  Start the local server.
 
@@ -105,10 +105,10 @@ LOCALDEV=true
 1.  Log in with the superuser account and navigate to the [admin panel](http://127.0.0.1:8000/admin/).
 
 
-1.  Update the entry in the *Sites* table to specify "127.0.0.1".
+1.  Update the entry in the **Sites** table to specify `127.0.0.1`.
 
 
-1.  Add a *Social Application* entry for Discord with the client credentials you obtained from Discord.
+1.  Add a **Social Application** entry for Discord with the client credentials you obtained from Discord.
 
 
 
