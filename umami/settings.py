@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'umami',
+    'guildmaster',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
